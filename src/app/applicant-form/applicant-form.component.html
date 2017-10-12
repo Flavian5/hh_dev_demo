@@ -1,59 +1,27 @@
 <div id="applicant-form">
   <div>
     <h4>Enter to win!</h4>
-    <p>Charlie and the Chocolate Kingdom and Goldstar Bars wants to give you a sweet prize! You could be among 5 lucky kids to win the chance to tour our factory. Just enter your full name, email address, and phone number in the form below and hit submit to be entered!</p>
+    <p>Story main body! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!</p>
   </div>
 
   <br>
-
-  <div *ngIf="err" class="alert alert-danger">
-    user with that name or email already exists
-  </div>
-
-  <form (ngSubmit)="onSubmit()" #applicantForm="ngForm">
+  
+  <form>
     <div class="form-group">
       <input type="text" class="form-control" id="applicant_name"
-        required placeholder="John Smith"
-        [(ngModel)]="model.applicant_name" name="name"
-        #name="ngModel">
-      <div *ngIf="name.invalid" class="alert alert-danger">
-        <div *ngIf="name.errors.required">
-          Name is required
-        </div>
-      </div>
+        required placeholder="John Smith" name="name">
     </div>
   
     <div class="form-group">
       <input type="email" class="form-control" id="email"
-        required email placeholder="john@smith.com"
-        [(ngModel)]="model.applicant_email" name="email"
-        #email="ngModel">
-      <div *ngIf="email.invalid" class="alert alert-danger">
-        <div *ngIf="email.errors.required">
-          Email is required
-        </div>
-        <div *ngIf="email.errors.email">
-          Email is not a valid email
-        </div>
-      </div>
+        required email placeholder="john@smith.com" name="email">
     </div>
   
     <div class="form-group">
       <input type="tel" class="form-control" id="phone-number"
-        required appPhoneNumber placeholder="(xxx) xxx-xxxx"
-        [(ngModel)]="model.phone_number" name="phone_number"
-        #phone="ngModel">
-      <div *ngIf="phone.invalid" class="alert alert-danger">
-        <div *ngIf="phone.errors.required">
-          Phone number is required
-        </div>
-        <div *ngIf="phone.errors.appPhoneNumber">
-          Must be a valid phone number
-        </div>
-      </div>
+        required appPhoneNumber placeholder="(xxx) xxx-xxxx" name="phone_number">
     </div>
   
-    <button type="submit" class="btn btn-success"
-      [disabled]="!applicantForm.form.valid">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>

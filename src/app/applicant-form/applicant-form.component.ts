@@ -12,44 +12,15 @@ import { API_URL } from '../../config';
   styleUrls: ['./applicant-form.component.css']
 })
 export class ApplicantFormComponent {
-  model = new Applicant('', '');
-  id: number;
-  data: any;
-  err = false;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor() {}
 
   onSubmit() {
-    this.http.post(API_URL + '/entries', this.model)
-      .subscribe(
-        data => {
-          this.data = data;
-          this.id = JSON.parse(this.data).applicant_id;
-          this.redirectToVictoryPage(this.id);
-        }, err => {
-          this.err = true;
-        }
-      );
   }
 
-  redirectToVictoryPage(id: number) {
-    this.callApi(API_URL + '/status', id).subscribe(
-      data => {
-        switch (data['status']) {
-          case 'Won': {
-            this.router.navigateByUrl('success');
-            break;
-          }
-          case 'Lost': {
-            this.router.navigateByUrl('failure');
-            break;
-          }
-        }
-      }
-    );
+  redirectToVictoryPage() {
   }
 
-  callApi(url: string, id: number) {
-    return this.http.get(url + '/' + id);
+  callApi() {
   }
 }

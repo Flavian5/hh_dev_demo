@@ -21,10 +21,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'Charlie and the Chocolate Kingdom'`, async(() => {
+  it(`should have as title 'Application Title'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Charlie and the Chocolate Kingdom');
+    expect(app.title).toEqual('Application Title');
   }));
   it('should render in a div tag with class "grid-root"', async(() => {
     const fixture = TestBed.createComponent(AppComponent);

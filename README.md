@@ -1,19 +1,15 @@
 # Charlie and the Chocolate Kingdom
 
-Welcome to Charlie's Chocolate Kingdom! This is a SPA page for a contest entry page. It was built with Angular 2, with an optional backend written in Go.
+Welcome to Charlie's Chocolate Kingdom! This is a skeletal front end framework for a contest entry page. It is built with Angular 2 and typescript.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
 
 ## Instructions
-install dependencies with `npm install`. Then run development server or Go server to access app.
+Install dependencies with `npm install`. 
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Go Backend 
-
-If you wish to use the Go server, first checkout the `backend` branch. Then run `./build-and-serve.sh`, which will compile the Angular SPA, the Go server, and serve the project on `localhost:8080`
 
 ## Build
 

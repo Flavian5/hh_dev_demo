@@ -1,4 +1,3 @@
 export interface ApplicantResponse {
-  applicant_id: number;
-  success: boolean;
+  // Response format from backend
 }

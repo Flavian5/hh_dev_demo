@@ -10,6 +10,5 @@ export class SuccessComponent {
   constructor(private router: Router) { }
 
   goBack(): void {
-    this.router.navigateByUrl('');
   }
 }
